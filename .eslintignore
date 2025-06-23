@@ -1,0 +1,34 @@
+# Build outputs - Excluir todo el contenido de estos directorios
+.next/**/*
+out/**/*
+build/**/*
+dist/**/*
+
+# Archivos específicos generados por Next.js
+**/_buildManifest.js
+**/_ssgManifest.js
+**/transform.js
+**/*.js.map
+
+# Dependencies
+node_modules/**/*
+
+# Cache
+.cache/**/*
+.pnpm-store/**/*
+
+# Public static files
+public/**/*
+
+# Generated files
+**/*.generated.*
+**/*.min.js
+
+# Config files
+next.config.js
+postcss.config.js
+tailwind.config.js
+**/*.config.js
+
+# Env files
+.env*
