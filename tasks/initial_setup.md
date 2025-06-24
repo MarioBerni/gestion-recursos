@@ -48,7 +48,7 @@ Este documento describe las tareas iniciales para configurar el proyecto de reco
   - Elementos institucionales (bordes, sellos, etc.)
   - Variables RGB para efectos visuales con transparencia
 
-  > **Actualización (2025-06-24)**: Se implementó un tema claro como estándar visual de la aplicación. Se actualizaron las variables CSS en theme.css para incluir versiones RGB de todos los colores para efectos de transparencia.
+  > **Actualización (2025-06-24)**: Se implementó un tema claro como estándar visual de la aplicación. Se actualizaron las variables CSS en theme.css para incluir versiones RGB de todos los colores para efectos de transparencia. Se refactorizó el formulario de inicio de sesión para mostrar el logo institucional como una marca de agua con un efecto de degradado.
 
 - [x] Implementar sistema de clases de utilidad en CSS puro:
   - Flexbox y Grid

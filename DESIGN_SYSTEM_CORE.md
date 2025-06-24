@@ -1,6 +1,6 @@
 # 🎨 DNGR: Sistema de Diseño Core
 
-> **Actualización (2025-06-24)**: Se ha implementado un tema claro como estándar visual de la aplicación. Las interfaces ahora utilizan fondos claros con texto oscuro para mejorar la legibilidad y reducir la fatiga visual.
+> **Actualización (2025-06-24)**: Se ha implementado un tema claro como estándar visual de la aplicación. Las interfaces ahora utilizan fondos claros con texto oscuro para mejorar la legibilidad y reducir la fatiga visual. Se ha establecido un sistema centralizado para iconos en `src/app/components/icons/` y se ha implementado un efecto de marca de agua para el logo institucional en el formulario de inicio de sesión.
 
 ## 1. Variables CSS Globales
 

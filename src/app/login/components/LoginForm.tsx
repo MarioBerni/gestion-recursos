@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Card from '../../components/ui/Card';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
+import { UserIcon, PasswordIcon, LoginIcon } from '../../components/icons';
+import LogoSVG from '../../components/icons/logo-gr.svg';
 
 const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -73,7 +75,14 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <Card variant="institutional" className="login-card" title="Acceso al Sistema">
+    <Card variant="institutional" className="login-card">
+      <div className="logo-watermark">
+        <img 
+          src={LogoSVG.src} 
+          alt="Logo Gestión de Recursos" 
+          className="watermark-image" 
+        />
+      </div>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-controls">
           <Input
@@ -86,17 +95,7 @@ const LoginForm: React.FC = () => {
             error={errors.username}
             isOfficial
             // Icono SVG inline para el usuario
-            leftIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-              >
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
-              </svg>
-            }
+            leftIcon={<UserIcon size={18} />}
           />
 
           <Input
@@ -109,17 +108,7 @@ const LoginForm: React.FC = () => {
             error={errors.password}
             isOfficial
             // Icono SVG inline para la contraseña
-            leftIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-              >
-                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path>
-              </svg>
-            }
+            leftIcon={<PasswordIcon size={18} />}
           />
 
           <div className="remember-me-row">
@@ -140,7 +129,8 @@ const LoginForm: React.FC = () => {
 
           <div className="login-button-container">
             <Button type="submit" variant="primary" fullWidth size="lg" isLoading={isLoading}>
-              Iniciar Sesión
+              <LoginIcon size={18} className="login-button-icon" />
+              <span className="login-button-text">Iniciar Sesión</span>
             </Button>
           </div>
         </div>

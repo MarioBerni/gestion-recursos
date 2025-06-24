@@ -1,6 +1,6 @@
 # 🔄 DNGR: Manual de Desarrollo
 
-> **Actualización (2025-06-24)**: El diseño de la aplicación utiliza ahora un tema claro como estándar. Los desarrolladores deben asegurarse de que todos los nuevos componentes respeten esta especificación de diseño.
+> **Actualización (2025-06-24)**: El diseño de la aplicación utiliza ahora un tema claro como estándar. Los iconos se han centralizado en `src/app/components/icons/` y deben ser importados desde allí. Para efectos visuales como marcas de agua, utilizar clases CSS con posicionamiento absoluto y opacidad reducida. Los desarrolladores deben asegurarse de que todos los nuevos componentes respeten esta especificación de diseño.
 
 ## 1. Proceso de Desarrollo
 
