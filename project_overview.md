@@ -41,7 +41,7 @@ Gestión de recursos policiales en el ámbito ministerial/gubernamental, con enf
 - **Lenguaje**: TypeScript
 - **Renderizado**: Híbrido (SSR/CSR según necesidad)
 - **UI/Componentes**: Componentes personalizados desarrollados por el equipo
-- **Estilos**: Tailwind CSS con tema personalizado
+- **Estilos**: Sistema CSS puro con variables CSS (tema institucional personalizado)
 - **Estado Global**: Context API + Zustand
 - **Formularios**: React Hook Form + Zod para validaciones
 - **Documentación**: Documentación en código mediante comentarios descriptivos
@@ -127,19 +127,16 @@ Cada módulo funcional (como personal, despliegues, etc.) sigue esta estructura:
 ### Módulos Iniciales
 
 1. **Personal**
-
    - Gestión de información de oficiales/personal
    - Seguimiento de licencias, disponibilidad y regímenes de trabajo
    - Asignación a unidades y servicios
 
 2. **Despliegues**
-
    - Planificación de operativos
    - Asignación de personal a despliegues
    - Seguimiento de estado y recursos
 
 3. **Servicios Especiales (222)**
-
    - Gestión de servicios adicionales
    - Seguimiento de asignaciones y compensaciones
 

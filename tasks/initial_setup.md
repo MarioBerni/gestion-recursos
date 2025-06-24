@@ -35,34 +35,30 @@ Este documento describe las tareas iniciales para configurar el proyecto de reco
 
 ### 2. Configuración de Estilos
 
-- [x] Implementar sistema de estilos (se sugiere Tailwind CSS):
-  ```bash
-  npm install -D tailwindcss postcss autoprefixer
-  npx tailwindcss init -p
+- [x] Implementar sistema de estilos:
   ```
-- [x] Crear tema personalizado para la aplicación:
+  /src/app/styles/theme.css      # Definiciones de variables CSS (colores, tipografía, etc.)
+  /src/app/globals.css           # Estilos globales y utilidades
   ```
-  /src/app/styles/theme.css      # Definiciones de colores, tipografía, etc.
-  ```
-- [x] Definir variables CSS globales:
-  ```css
-  :root {
-    --color-primary: #1a56db;
-    --color-secondary: #1e429f;
-    --color-accent: #4f46e5;
-    --color-success: #046c4e;
-    --color-danger: #c81e1e;
-    --color-warning: #f59e0b;
-    --color-info: #2563eb;
-    --color-background: #f9fafb;
-    --color-text: #111827;
-    --color-text-light: #6b7280;
-    --font-family: 'Inter', system-ui, sans-serif;
-  }
-  ```
+- [x] Crear tema personalizado institucional para la aplicación con variables CSS para:
+  - Colores primarios (azul marino institucional)
+  - Colores secundarios (gris oxford formal)
+  - Acentos (dorado ceremonial)
+  - Rojo institucional para elementos oficiales
+  - Elementos institucionales (bordes, sellos, etc.)
+  - Variables RGB para efectos visuales con transparencia
+
+  > **Actualización (2025-06-24)**: Se implementó un tema claro como estándar visual de la aplicación. Se actualizaron las variables CSS en theme.css para incluir versiones RGB de todos los colores para efectos de transparencia.
+
+- [x] Implementar sistema de clases de utilidad en CSS puro:
+  - Flexbox y Grid
+  - Espaciado consistente
+  - Tipografía y colores
+  - Bordes y sombras
+
 - [x] Crear reset CSS para normalizar estilos entre navegadores
 
-  > **Nota:** Configuración de estilos completada el 22/06/2025. Se creó el archivo `tailwind.config.js` con tema personalizado y `theme.css` con variables CSS.
+  > **Nota:** Configuración de estilos completada y refinada el 23/06/2025. Se actualizaron los archivos `theme.css` con variables CSS institucionales y `globals.css` con estilos y utilidades. La paleta de colores fue optimizada para mejor contraste visual.
 
 ### 3. Instalación de Dependencias Principales
 
@@ -84,6 +80,15 @@ Este documento describe las tareas iniciales para configurar el proyecto de reco
   pnpm install jspdf-autotable      # Tablas avanzadas en PDFs
   ```
 
+- [x] Implementación de componentes UI custom:
+
+  Se han creado los siguientes componentes base con CSS puro:
+  - `Button.tsx` y `button.css` - Botones estilizados con variantes (primary, secondary, danger, outline, ghost)
+  - `Input.tsx` y `input.css` - Campos de entrada con soporte para label, error, iconos y variantes
+  - `Card.tsx` y `card.css` - Contenedores estilizados con variantes institucionales
+
+  > **Nota:** Los componentes UI fueron implementados el 23/06/2025 siguiendo el diseño institucional formal.
+
 - [ ] Opciones de librerías UI (decisión: crear componentes personalizados):
 
   ```bash
@@ -95,7 +100,26 @@ Este documento describe las tareas iniciales para configurar el proyecto de reco
 
   > **Nota:** Se decidió utilizar pnpm como gestor de paquetes por su eficiencia y velocidad. Dependencias principales instaladas el 22/06/2025. Librerías para exportación (xlsx, jspdf y jspdf-autotable) instaladas el 23/06/2025.
 
-### 4. Configuración de Linters y Formatters
+### 4. Estructura de Páginas y Componentes
+
+- [x] Crear estructura base de páginas:
+  - [x] Página de inicio de sesión (`/login`)
+    - Implementación con ruta en `/login`
+    - Componente `LoginForm` con validación de campos
+    - Estilos CSS personalizados en `login.css`
+    - Redirección automática desde ruta raíz (`/`) a `/login`
+  - [ ] Dashboard (`/dashboard`)
+  - [ ] Layout global con menú lateral
+
+  > **Nota:** Página de login completada el 23/06/2025 con diseño institucional optimizado y contraste adecuado.
+
+- [ ] Implementar componentes reutilizables:
+  - Componentes de navegación (menú principal, breadcrumbs)
+  - Tablas de datos con ordenación y filtrado
+  - Formularios con validación
+  - Componentes modales y drawers
+
+### 5. Configuración de Linters y Formatters
 
 - [x] Configurar ESLint:
 
@@ -185,14 +209,16 @@ Este documento describe las tareas iniciales para configurar el proyecto de reco
 
 ### 6. Componentes Base Compartidos
 
-- [ ] Diseñar e implementar componentes base:
-  - [ ] Botones (primario, secundario, peligro)
-  - [ ] Inputs y controles de formulario
+- [x] Diseñar e implementar componentes base:
+  - [x] Botones (primario, secundario, peligro)
+  - [x] Inputs y controles de formulario
   - [ ] Tablas y componentes de datos
   - [ ] Componentes de navegación (navbar, sidebar)
   - [ ] Componentes de layouts y contenedores
   - [ ] Modales y diálogos
   - [ ] Componentes de notificación
+  
+  > **Actualización (2025-06-24)**: Se implementaron componentes de Button e Input con estilos adaptados al tema claro y soporte para diferentes variantes. Los componentes utilizan variables RGB para efectos de foco y estado.
 
 ### 7. Configuración de Mock Data
 

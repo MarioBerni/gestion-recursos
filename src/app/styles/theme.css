@@ -1,15 +1,178 @@
+/**
+ * DNGR - Sistema de Gestión de Recursos Policiales
+ * Tema institucional centralizado
+ * 
+ * Color primario: Azul marino institucional (representa autoridad y profesionalismo)
+ * Color secundario: Gris oxford (expresa formalidad y seriedad)
+ * Acentos: Dorado ceremonial (simboliza prestigio y oficialidad)
+ * Tonos complementarios: Rojo institucional y verde oficial
+ *
+ * Fuentes: Combinación de sans-serif robusta para UI y serif elegante para títulos oficiales
+ */
+
 :root {
-  --color-primary: #1a56db;
-  --color-secondary: #1e429f;
-  --color-accent: #4f46e5;
-  --color-success: #046c4e;
-  --color-danger: #c81e1e;
-  --color-warning: #f59e0b;
-  --color-info: #2563eb;
-  --color-background: #f9fafb;
-  --color-text: #111827;
-  --color-text-light: #6b7280;
-  --font-family: 'Inter', system-ui, sans-serif;
+  /* === COLORES INSTITUCIONALES === */
+
+  /* Colores primarios - Azul marino institucional */
+  --color-primary-50: #ebf1f9;
+  --color-primary-50-rgb: 235, 241, 249;
+  --color-primary-100: #d3e0f0;
+  --color-primary-100-rgb: 211, 224, 240;
+  --color-primary-200: #a8c2e3;
+  --color-primary-200-rgb: 168, 194, 227;
+  --color-primary-300: #759fd1;
+  --color-primary-300-rgb: 117, 159, 209;
+  --color-primary-400: #5683be;
+  --color-primary-400-rgb: 86, 131, 190;
+  --color-primary-500: #2e64aa; /* Color principal institucional */
+  --color-primary-500-rgb: 46, 100, 170;
+  --color-primary-600: #265391;
+  --color-primary-600-rgb: 38, 83, 145;
+  --color-primary-700: #1d4178;
+  --color-primary-700-rgb: 29, 65, 120;
+  --color-primary-800: #16305c;
+  --color-primary-800-rgb: 22, 48, 92;
+  --color-primary-900: #0e1e3c;
+  --color-primary-900-rgb: 14, 30, 60;
+
+  /* Colores secundarios - Gris oxford formal */
+  --color-secondary-50: #f4f5f6;
+  --color-secondary-50-rgb: 244, 245, 246;
+  --color-secondary-100: #e2e4e7;
+  --color-secondary-100-rgb: 226, 228, 231;
+  --color-secondary-200: #c5c9cf;
+  --color-secondary-200-rgb: 197, 201, 207;
+  --color-secondary-300: #a7adb7;
+  --color-secondary-300-rgb: 167, 173, 183;
+  --color-secondary-400: #8b929f;
+  --color-secondary-400-rgb: 139, 146, 159;
+  --color-secondary-500: #6c7585; /* Color secundario principal */
+  --color-secondary-500-rgb: 108, 117, 133;
+  --color-secondary-600: #586170;
+  --color-secondary-600-rgb: 88, 97, 112;
+  --color-secondary-700: #464d5a;
+  --color-secondary-700-rgb: 70, 77, 90;
+  --color-secondary-800: #33383f;
+  --color-secondary-800-rgb: 51, 56, 63;
+  --color-secondary-900: #1f2126;
+  --color-secondary-900-rgb: 31, 33, 38;
+
+  /* Acentos - Dorado ceremonial */
+  --color-accent-50: #fcf9f2;
+  --color-accent-100: #f7efd7;
+  --color-accent-200: #f1e0ae;
+  --color-accent-300: #e7cd7d;
+  --color-accent-400: #ddb956;
+  --color-accent-500: #d4aa33; /* Color acento principal */
+  --color-accent-600: #ba9424;
+  --color-accent-700: #98781d;
+  --color-accent-800: #735b15;
+  --color-accent-900: #4f3e0e;
+
+  /* Colores semánticos institucionales */
+  --color-success-light: #e4f5ed;
+  --color-success-light-rgb: 228, 245, 237;
+  --color-success: #0a5e3f; /* Verde forestal oscuro para éxito */
+  --color-success-rgb: 10, 94, 63;
+  --color-success-dark: #084832;
+  --color-success-dark-rgb: 8, 72, 50;
+
+  --color-danger-light: #faebeb;
+  --color-danger-light-rgb: 250, 235, 235;
+  --color-danger: #961c1c; /* Rojo oscuro para alertas oficiales */
+  --color-danger-rgb: 150, 28, 28;
+  --color-danger-dark: #771717;
+  --color-danger-dark-rgb: 119, 23, 23;
+
+  --color-warning-light: #fcf4e5;
+  --color-warning-light-rgb: 252, 244, 229;
+  --color-warning: #b06e0f; /* Ámbar para advertencias administrativas */
+  --color-warning-rgb: 176, 110, 15;
+  --color-warning-dark: #8c5912;
+  --color-warning-dark-rgb: 140, 89, 18;
+
+  --color-info-light: #e6eef8;
+  --color-info-light-rgb: 230, 238, 248;
+  --color-info: #1b4580; /* Azul oscuro para comunicados oficiales */
+  --color-info-rgb: 27, 69, 128;
+  --color-info-dark: #143361;
+  --color-info-dark-rgb: 20, 51, 97;
+
+  /* Rojo institucional (para insignias y sellos) */
+  --color-institutional-red-light: #f8e6e6;
+  --color-institutional-red: #8b0e0e;
+  --color-institutional-red-dark: #6e0a0a;
+
+  /* Neutrales refinados */
+  --color-white: #ffffff;
+  --color-white-rgb: 255, 255, 255;
+  --color-background: #f8f9fb; /* Fondo principal más limpio */
+  --color-background-rgb: 248, 249, 251;
+  --color-background-alt: #eef1f6; /* Fondo secundario */
+  --color-background-alt-rgb: 238, 241, 246;
+  --color-text: #18191e; /* Texto principal más oscuro para mayor contraste */
+  --color-text-rgb: 24, 25, 30;
+  --color-text-medium: #383b42; /* Texto secundario */
+  --color-text-medium-rgb: 56, 59, 66;
+  --color-text-light: #5d6169; /* Texto terciario */
+  --color-text-light-rgb: 93, 97, 105;
+  --color-border: #d0d5dd; /* Bordes sutiles */
+  --color-border-rgb: 208, 213, 221;
+  --color-border-dark: #98a0ad; /* Bordes más destacados */
+  --color-border-dark-rgb: 152, 160, 173;
+
+  /* === TIPOGRAFÍA === */
+  /* Sans-serif robusta para interfaz general */
+  --font-family-primary:
+    'Inter', 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', sans-serif;
+  /* Serif elegante para títulos oficiales y credenciales */
+  --font-family-secondary: 'Libre Baskerville', 'Times New Roman', serif;
+  /* Monospace para códigos y datos técnicos */
+  --font-family-monospace: 'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace;
+
+  /* === ELEMENTOS INSTITUCIONALES === */
+  /* Bordes institucionales */
+  --border-official: 2px solid var(--color-institutional-red);
+  --border-official-accent: 1px solid var(--color-accent-500);
+  --border-official-document: 1px solid var(--color-border-dark);
+
+  /* Sellos y marcas oficiales */
+  --stamp-shadow: 0 2px 8px rgba(27, 31, 35, 0.15);
+  --seal-gradient: linear-gradient(45deg, var(--color-primary-700), var(--color-primary-900));
+  --badge-gradient: linear-gradient(
+    45deg,
+    var(--color-institutional-red),
+    var(--color-danger-dark)
+  );
+
+  /* === ESPACIADO === */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 2.5rem; /* 40px */
+  --space-8: 3rem; /* 48px */
+  --space-9: 3.5rem; /* 56px */
+  --space-10: 4rem; /* 64px */
+
+  /* === SOMBRAS === */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 2px 4px rgba(16, 24, 40, 0.06), 0 4px 6px rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 4px 6px rgba(16, 24, 40, 0.05), 0 10px 15px rgba(16, 24, 40, 0.1);
+  --shadow-elevated: 0 10px 30px rgba(16, 24, 40, 0.12), 0 30px 60px rgba(16, 24, 40, 0.12);
+
+  /* === BORDES === */
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+
+  /* === TRANSICIONES === */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset básico para normalizar estilos entre navegadores */

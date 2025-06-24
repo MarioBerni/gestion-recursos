@@ -15,6 +15,7 @@
     "fix-all": "prettier --write . && next lint --fix"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
     "date-fns": "^4.1.0",
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",
@@ -29,7 +30,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -40,7 +40,6 @@
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.0",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }

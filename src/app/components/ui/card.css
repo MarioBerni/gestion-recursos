@@ -1,0 +1,109 @@
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.card-institutional {
+  border-top: 4px solid var(--color-primary-600);
+  background: white;
+  position: relative;
+}
+
+.card-institutional::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(236, 242, 252, 0.4) 0%, rgba(255, 255, 255, 1) 15%);
+  z-index: -1;
+}
+
+.card-official {
+  border: var(--border-official-document);
+  background: white;
+  position: relative;
+}
+
+.card-official::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--seal-gradient);
+}
+
+.card-header {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.card-title {
+  margin: 0;
+  color: var(--color-neutral-900);
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-subtitle {
+  margin: var(--space-1) 0 0;
+  color: var(--color-neutral-600);
+  font-size: 0.875rem;
+}
+
+.card-body {
+  padding: var(--space-4);
+}
+
+.card-footer {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-neutral-50);
+  border-top: 1px solid var(--color-neutral-200);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+/* Variantes de tamaño */
+.card-sm {
+  max-width: 320px;
+}
+
+.card-md {
+  max-width: 480px;
+}
+
+.card-lg {
+  max-width: 640px;
+}
+
+.card-full {
+  width: 100%;
+}
+
+/* Estilo especial para tarjetas de credenciales institucionales */
+.card-credential {
+  position: relative;
+  border: var(--border-official);
+  background-color: white;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.card-credential::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--badge-gradient);
+}
